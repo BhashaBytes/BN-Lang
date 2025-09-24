@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <title>BN-Lang: Bengali Inspired Programming</title>
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.24.1/full/pyodide.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a href="https://bhashabytes.github.io/" class="site-logo" aria-label="BhashaBytes Home">
+    <img src="logo.png" alt="BhashaBytes Logo" />
+  </a>
+  <h1>BN-Lang: Bengali-Inspired Programming</h1>
+
+  <div class="intro-card">
+    <p>
+      Welcome to <strong>BN-Lang</strong> – a programming language designed especially for Bengali speakers!
+      BN-Lang makes coding more intuitive by using Bengali words and their transliterations as keywords,
+      instead of English-based Python syntax. It’s beginner-friendly and runs fully on Python via a translation layer.
+    </p>
+    <p>
+      Write code below, run it instantly, and explore BN-Lang’s features with live examples. Learning programming
+      has never been this friendly!
+    </p>
+  </div>
+
+  <div class="container">
+    <textarea id="bengaliCode" rows="10" placeholder="Type your Bengali code here...">প্রিন্ট("Hello BN-Lang!")</textarea>
+    <br>
+    <button onclick="runCode()">Run Code</button>
+    <pre id="output">Output will appear here...</pre>
+  </div>
+
+  <h2>Documentation & Examples</h2>
+  <div class="docs">
+    <h3>Print (প্রিন্ট / dekhao)</h3>
+    <pre>প্রিন্ট("Hello World")</pre>
+
+    <h3>Functions (সংজ্ঞা / songja)</h3>
+    <pre>সংজ্ঞা যোগ(a, b):
+    ফেরত দাও a + b
+প্রিন্ট("ফলাফল =", যোগ(5, 3))</pre>
+
+    <h3>Input (নাও / nao)</h3>
+    <pre>a = int(নাও("num1:"))
+b = int(নাও("num2:"))
+প্রিন্ট("মোট =", a + b)</pre>
+
+    <h3>Conditionals</h3>
+    <pre>i = 5
+যদি i > 3:
+    প্রিন্ট("i বড়")
+অন্যথা যদি i == 3:
+    প্রিন্ট("i সমান")
+নাহলে:
+    প্রিন্ট("i ছোট")</pre>
+
+    <h3>Loops</h3>
+    <pre>জন্য x in [1,2,3]:
+    প্রিন্ট("x =", x)
+i = 0
+যখন i < 3:
+    প্রিন্ট("i =", i)
+    i += 1</pre>
+
+    <h3>Loop Control</h3>
+    <pre>জন্য x in [1,2,3]:
+    যদি x == 2:
+        প্রিন্ট("দুই পাওয়া গেছে")
+        থামাও
+    অন্যথা:
+        প্রিন্ট(x)</pre>
+
+    <h3>Booleans & None</h3>
+    <pre>যদি সত্য:
+    প্রিন্ট("true")
+অন্যথা যদি মিথ্যা:
+    প্রিন্ট("false")
+প্রিন্ট("কোনো মান নেই =", কিছুই না)</pre>
+
+    <h3>Exceptions</h3>
+    <pre>চেষ্টা করো:
+    1 / 0
+ভুল ZeroDivisionError:
+    প্রিন্ট("শূন্য দিয়ে ভাগ করা যায় না")
+অবশেষে:
+    প্রিন্ট("এটি সবসময় হবে")</pre>
+
+    <h3>Imports</h3>
+    <pre>আমদানি math হিসেবে m
+প্রিন্ট(m.sqrt(4))</pre>
+
+    <p>Modify examples above and run your own BN-Lang code above!</p>
+  </div>
+
+  <h2>BN-Lang Keywords</h2>
+  <div class="reference-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Python</th>
+          <th>Bengali Script</th>
+          <th>Transliteration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>print</td><td>প্রিন্ট</td><td>dekhao</td></tr>
+        <tr><td>input</td><td>নাও</td><td>nao</td></tr>
+        <tr><td>if</td><td>যদি</td><td>jodi</td></tr>
+        <tr><td>elif</td><td>অন্যথা যদি</td><td>onyotha jodi</td></tr>
+        <tr><td>else</td><td>নাহলে</td><td>nahole</td></tr>
+        <tr><td>for</td><td>জন্য</td><td>jonno</td></tr>
+        <tr><td>or</td><td>অথবা</td><td>othoba</td></tr>
+        <tr><td>while</td><td>যখন</td><td>jokhon</td></tr>
+        <tr><td>def</td><td>সংজ্ঞা</td><td>songja</td></tr>
+        <tr><td>class</td><td>শ্রেণী</td><td>shreni</td></tr>
+        <tr><td>return</td><td>ফেরত দাও</td><td>ferot dao</td></tr>
+        <tr><td>break</td><td>থামাও</td><td>thamaw</td></tr>
+        <tr><td>continue</td><td>চালিয়ে যাও</td><td>chaliye jao</td></tr>
+        <tr><td>import</td><td>আমদানি</td><td>amdani</td></tr>
+        <tr><td>from</td><td>থেকে</td><td>theke</td></tr>
+        <tr><td>as</td><td>হিসেবে</td><td>hisebe</td></tr>
+        <tr><td>with</td><td>সাথে</td><td>sathe</td></tr>
+        <tr><td>try</td><td>চেষ্টা করো</td><td>chesta koro</td></tr>
+        <tr><td>except</td><td>ভুল</td><td>bhul</td></tr>
+        <tr><td>finally</td><td>অবশেষে</td><td>oboseshe</td></tr>
+        <tr><td>True</td><td>সত্য</td><td>sotto</td></tr>
+        <tr><td>False</td><td>মিথ্যা</td><td>mithya</td></tr>
+        <tr><td>None</td><td>কিছুই না</td><td>kichu na</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    let pyodideReady = false;
+    let pyodide;
+
+    async function loadPyodideAndPackages() {
+      pyodide = await loadPyodide();
+
+      pyodide.runPython(`
+import sys
+from js import document, prompt
+
+class OutputCatcher:
+    def write(self, s):
+        if s.strip():
+            document.getElementById("output").textContent += s + "\\n"
+    def flush(self): pass
+
+sys.stdout = OutputCatcher()
+sys.stderr = OutputCatcher()
+
+def input(msg=""):
+    resp = prompt(str(msg))
+    return "" if resp is None else str(resp)
+`);
+      pyodideReady = true;
+    }
+    loadPyodideAndPackages();
+
+    const mapping = {
+      "প্রিন্ট": "print", "dekhao": "print",
+      "নাও": "input", "nao": "input",
+      "যদি": "if", "jodi": "if",
+      "অন্যথা যদি": "elif", "onyotha jodi": "elif",
+      "নাহলে": "else", "nahole": "else",
+      "জন্য": "for", "jonno": "for",
+      "যখন": "while", "jokhon": "while",
+      "সংজ্ঞা": "def", "songja": "def",
+      "শ্রেণী": "class", "shreni": "class",
+      "ফেরত দাও": "return", "ferot dao": "return",
+      "থামাও": "break", "thamaw": "break",
+      "চালিয়ে যাও": "continue", "chaliye jao": "continue",
+      "আমদানি": "import", "amdani": "import",
+      "থেকে": "from", "theke": "from",
+      "হিসেবে": "as", "hisebe": "as",
+      "সাথে": "with", "sathe": "with",
+      "চেষ্টা করো": "try", "chesta koro": "try",
+      "ভুল": "except", "bhul": "except",
+      "অবশেষে": "finally", "oboseshe": "finally",
+      "সত্য": "True", "sotto": "True",
+      "মিথ্যা": "False", "mithya": "False",
+      "কিছুই না": "None", "kichu na": "None",
+      "অথবা": "or", "othoba": "or"
+    };
+
+    function escapeRegExp(str) {
+      return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    function translate(code) {
+      for (let key in mapping) {
+        const re = new RegExp(`(?<!\\w)${escapeRegExp(key)}(?!\\w)`, 'gu');
+        code = code.replace(re, mapping[key]);
+      }
+      return code;
+    }
+
+    async function runCode() {
+      if (!pyodideReady) {
+        alert("Pyodide is still loading...");
+        return;
+      }
+      document.getElementById("output").textContent = "";
+      const rawCode = document.getElementById("bengaliCode").value;
+      const pyCode = translate(rawCode);
+
+      try {
+        await pyodide.runPythonAsync(pyCode);
+      } catch (err) {
+        document.getElementById("output").textContent += "Error: " + err + "\n";
+      }
+    }
+  </script>
+</body>
+</html>
